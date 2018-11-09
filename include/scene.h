@@ -252,7 +252,7 @@ public:
 
 	// importing an OBJ file with MTL file
 	//////////////////////////////////////////////
-	void importOBJ(char *name)
+	void importOBJ(const char *name)
 	{
 		FILE *fd;
 		int nobj=0;
@@ -546,7 +546,7 @@ public:
 	//////////////////////////////////
 
 	// OPENGL ERROR CHECK
-	static int CheckGLError(char *file, int line)
+	static int CheckGLError(const char *file, int line)
 	{
 		GLenum glErr;
 		int    retCode = 0;
