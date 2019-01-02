@@ -1,0 +1,33 @@
+#ifndef __VOXEL_H__
+#define __VOXEL_H__
+
+// requires a point structure to store the triangle's vertices
+#include "gmath/vec3.h"
+#include <vector>
+
+// class representing a voxel
+template<typename T>
+class Voxel
+{
+public:
+	//////////////////////////////////////////////////////////////////////////////
+	// attributes
+	//////////////////////////////////////////////////////////////////////////////
+	
+	std::vector<vec3<T>*> _vertices;	// vertices in the voxel
+
+	//////////////////////////////////////////////////////////////////////////////
+	// methods
+	//////////////////////////////////////////////////////////////////////////////
+	
+	// constructor (empty by default)
+	Voxel();
+
+	// adding a pointer to a vertex into the voxel
+	void addVertex(vec3<T> *v);
+};
+
+#include "Voxel.hxx"
+
+#endif
+
