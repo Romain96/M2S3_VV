@@ -2,10 +2,13 @@
 #define __GRID3D_H__
 
 // needing point structure for vertices
-#include "gmath/vec3.h"
+#include "Vertex.h"
 
 // needing triangle structure
 #include "Triangle.h"
+
+// needing a voxel structure
+#include "Voxel.h"
 
 #include <vector>
 
@@ -23,6 +26,8 @@ public:
 
 	unsigned int _n;	// subdivision factor (size of box is (x/n, y/n, z/n))
 
+	std::vector<Voxel<T>> _voxels;	// the actual grid itself
+
 	//////////////////////////////////////////////////////////////////////////////
 	//  methods
 	//////////////////////////////////////////////////////////////////////////////
@@ -35,7 +40,7 @@ public:
 	void __pointerReconstruction(std::vector<Triangle<T>> &triangles, Vertex<T> target, Vertex<T> goal);
 
 	// voxelization
-	void voxelize(std::vector<vec3<T>> &vertices, std::vector<Triangle<T>> &triangles);
+	void voxelize(std::vector<Vertex<T>> &vertices, std::vector<Triangle<T>> &triangles);
 };
 
 #include "Grid3D.hxx"
