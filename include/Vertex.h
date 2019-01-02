@@ -2,6 +2,7 @@
 #define __VERTEX_H__
 
 // needing a 3D vector class
+#include "gmath/vec3.h"
 
 // class representing a vertex : a unique ID and  X Y Z coordinates
 template<typename T>

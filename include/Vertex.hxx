@@ -1,7 +1,6 @@
 #ifndef __VERTEX_HXX__
 #define __VERTEX_HXX__
 
-#include <iostream>
 #include "Vertex.h"
 
 // unique ID initialization
@@ -28,7 +27,6 @@ Vertex<T>::Vertex(T x, T y, T z) :
 template<typename T>
 bool Vertex<T>::operator== (const Vertex<T> &v)
 {
-	std::cout << "custom operator : HELLO WORLD" << std::endl;
 	return this->_id == v._id;
 }
 
