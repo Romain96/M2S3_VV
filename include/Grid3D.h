@@ -9,7 +9,7 @@
 
 #include <vector>
 
-// interface for 3D grid based space patitionning class
+// interface for 3D grid based space partitionning class
 template<typename T>
 class Grid3D
 {
@@ -31,6 +31,8 @@ public:
 	Grid3D() = delete;
 	Grid3D(T x, T y, T z, unsigned int n);
 
+	// used in voxelization
+	void __pointerReconstruction(std::vector<Triangle<T>> &triangles, Vertex<T> target, Vertex<T> goal);
 
 	// voxelization
 	void voxelize(std::vector<vec3<T>> &vertices, std::vector<Triangle<T>> &triangles);
