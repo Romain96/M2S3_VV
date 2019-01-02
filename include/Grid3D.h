@@ -1,6 +1,14 @@
 #ifndef __GRID3D_H__
 #define __GRID3D_H__
 
+// needing point structure for vertices
+#include "gmath/vec3.h"
+
+// needing triangle structure
+#include "Triangle.h"
+
+#include <vector>
+
 // interface for 3D grid based space patitionning class
 template<typename T>
 class Grid3D
@@ -24,6 +32,8 @@ public:
 	Grid3D(T x, T y, T z, unsigned int n);
 
 
+	// voxelization
+	void voxelize(std::vector<vec3<T>> &vertices, std::vector<Triangle<T>> &triangles);
 };
 
 #include "Grid3D.hxx"
