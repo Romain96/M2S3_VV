@@ -26,6 +26,8 @@ public:
 	// constructor
 	Vertex();
 	Vertex(T x, T y, T z);
+
+	bool operator== (const Vertex<T> &v);
 };
 
 #include "Vertex.hxx"
