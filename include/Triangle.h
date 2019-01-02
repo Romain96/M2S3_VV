@@ -1,8 +1,11 @@
 #ifndef __TRIANGLE_H__
 #define __TRIANGLE_H__
 
-// nedding point structure for triangle vertices
-#include "gmath/vec3.h"
+// needing point structure for triangle vertices
+#include "Triangle.h"
+
+// needing a vertex structure
+#include "Vertex.h"
 
 // triangle class
 template<typename T>
@@ -14,9 +17,9 @@ public:
 	//////////////////////////////////////////////////////////////////////////////
 	
 	// vertices
-	vec3<T> _a;
-	vec3<T> _b;
-	vec3<T> _c;
+	Vertex<T> _a;
+	Vertex<T> _b;
+	Vertex<T> _c;
 
 	// lenghts - TODO
 	
@@ -36,7 +39,7 @@ public:
 
 	// constructors
 	Triangle();
-	Triangle(vec3<T> a, vec3<T> b, vec3<T> c);
+	Triangle(Vertex<T> a, Vertex<T> b, Vertex<T> c);
 
 	// methods for intersection... - TODO
 };
