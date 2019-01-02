@@ -13,7 +13,7 @@ Voxel<T>::Voxel()
 
 // adds a vertex to the list of vertices belonging to the vertex
 template<typename T>
-void Voxel<T>::addVertex(vec3<T> v)
+void Voxel<T>::addVertex(Vertex<T> v)
 {
 	_vertices.push_back(v);
 }
