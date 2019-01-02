@@ -1,0 +1,32 @@
+#ifndef __GRID3D_H__
+#define __GRID3D_H__
+
+// interface for 3D grid based space patitionning class
+template<typename T>
+class Grid3D
+{
+public:
+	//////////////////////////////////////////////////////////////////////////////
+	// attributes
+	//////////////////////////////////////////////////////////////////////////////
+	T _x;	// length on the X axis
+	T _y;	// length on the Y axis
+	T _z;	// length on the Z axis
+
+	unsigned int _n;	// subdivision factor (size of box is (x/n, y/n, z/n))
+
+	//////////////////////////////////////////////////////////////////////////////
+	//  methods
+	//////////////////////////////////////////////////////////////////////////////
+	
+	// constructors
+	Grid3D() = delete;
+	Grid3D(T x, T y, T z, unsigned int n);
+
+
+};
+
+#include "Grid3D.hxx"
+
+#endif
+
