@@ -14,7 +14,7 @@ public:
 	// attributes
 	//////////////////////////////////////////////////////////////////////////////
 	
-	std::vector<vec3<T>*> _vertices;	// vertices in the voxel
+	std::vector<vec3<T>> _vertices;	// vertices in the voxel
 
 	//////////////////////////////////////////////////////////////////////////////
 	// methods
@@ -24,7 +24,7 @@ public:
 	Voxel();
 
 	// adding a pointer to a vertex into the voxel
-	void addVertex(vec3<T> *v);
+	void addVertex(vec3<T> v);
 };
 
 #include "Voxel.hxx"
