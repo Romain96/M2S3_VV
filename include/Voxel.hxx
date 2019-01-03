@@ -18,5 +18,13 @@ void Voxel<T>::addVertex(Vertex<T> v)
 	_vertices.push_back(v);
 }
 
+// adds a triangle to the list of triangles intersecting the voxel 
+// triangles pointer to triangles in fact
+template<typename T>
+void Voxel<T>::addTriangle(Triangle<T> *t)
+{
+	_triangles.push_back(t);
+}
+
 #endif
 

@@ -10,7 +10,10 @@
 // needing a voxel structure
 #include "Voxel.h"
 
-#include <vector>
+// needing the intersection
+#include "gmath/intersection3.h"
+
+#include <map>
 
 // interface for 3D grid based space partitionning class
 template<typename T>
@@ -26,7 +29,7 @@ public:
 
 	unsigned int _n;	// subdivision factor (size of box is (x/n, y/n, z/n))
 
-	std::vector<Voxel<T>> _voxels;	// the actual grid itself
+	std::map<int, Voxel<T>> _voxels;	// the actual grid itself
 
 	//////////////////////////////////////////////////////////////////////////////
 	//  methods
@@ -36,8 +39,11 @@ public:
 	Grid3D() = delete;
 	Grid3D(T x, T y, T z, unsigned int n);
 
-	// used in voxelization
+	// used in voxelization : repair triangle to vertices pointers
 	void __pointerReconstruction(std::vector<Triangle<T>> &triangles, Vertex<T> target, Vertex<T> goal);
+
+	// used in voxelization : find all triangles intersecting a voxel
+	void __findTriangleVoxelIntersection(std::vector<Triangle<T>> &triangles);
 
 	// voxelization
 	void voxelize(std::vector<Vertex<T>> &vertices, std::vector<Triangle<T>> &triangles);
