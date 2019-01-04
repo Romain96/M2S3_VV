@@ -18,10 +18,4 @@ Aspects techniques :
 * langage de programmation : C++
 * programmation graphique : OpenGL
 * bibliothèques graphiques : GLUT, GLEW
-* plate-forme : développé sous Visual Studio 2015 64bits
-
-## Milestones
-
-| Description | Date de début | Date de fin |
-|-------------|---------------|-------------|
-| X | XXXX-XX-XX | XXXX-XX-XX |
+* plate-forme : développé sous Ubuntu 18.04
